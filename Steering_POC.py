@@ -110,6 +110,5 @@ with model.hooks(fwd_hooks=[("blocks.6.hook_resid_pre", steering_hook)]):
         max_new_tokens=50
     )
 
-# Poi decodifichiamo come prima
 readable_story = model.to_string(output_steered[0])
 print(readable_story)
